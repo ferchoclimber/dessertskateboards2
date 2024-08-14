@@ -1,64 +1,48 @@
-import Link from 'next/link';
+// components/Footer.js
+import React from 'react';
 
-export default function Footer() {
-  return (
-    <footer>
-      <div className="container">
-        <p>&copy; {new Date().getFullYear()} Skate Shop. All rights reserved.</p>
-        <ul className="footer-links">
-          <li>
-            <Link href="/privacy" passHref>
-              Privacy Policy
-            </Link>
-          </li>
-          <li>
-            <Link href="/terms" passHref>
-              Terms of Service
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" passHref>
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+const Footer = () => (
+  <footer>
+    <div className="container2">
+      <div className="logo2">
+        <img src="/imagenes/skeleton-sitting-desert-death-valley-california-usa-skeleton-desert-environment-pollution-causing-end-297488646.webp" width="200" height="200" alt="Logo" />
       </div>
+      <div className="columnas">
+        <div className="columna">
+          <h4>COLABORACIONES</h4>
+          <ul>
+            <li><a href="#">4ta Skateshop</a></li>
+            <li><a href="#">Imperio</a></li>
+            <li><a href="#">Medusa Skate shop</a></li>
+          </ul>
+        </div>
+        <div className="columna">
+          <h4>GRUPOS SOCIALES</h4>
+          <ul>
+            <li><a href="#">Patina Chihuahua</a></li>
+            <li><a href="#">Papi Gang</a></li>
+            <li><a href="#">Criaz</a></li>
+          </ul>
+        </div>
+        <div className="columna">
+          <h4>MARCAS PRINCIPALES</h4>
+          <ul>
+            <li><a href="#">Primitive</a></li>
+            <li><a href="#">Almost</a></li>
+            <li><a href="#">Spitfire</a></li>
+            <li><a href="#">Tenzor</a></li>
+            <li><a href="#">April Skateboards</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="redes-sociales">
+        <a href="#"><i className='bx bxl-facebook-circle'></i></a>
+        <a href="#"><i className='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i className='bx bxl-twitter'></i></a>
+        <a href="#"><i className='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+  </footer>
+);
 
-      <style jsx>{`
-        footer {
-          background-color: #333;
-          color: white;
-          padding: 20px 0;
-          text-align: center;
-        }
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-        .footer-links {
-          list-style: none;
-          padding: 0;
-          margin: 10px 0;
-        }
-        .footer-links li {
-          display: inline;
-          margin: 0 10px;
-        }
-        .footer-links a {
-          color: white;
-          text-decoration: none;
-        }
-        @media (max-width: 768px) {
-          .footer-links {
-            display: block;
-          }
-          .footer-links li {
-            display: block;
-            margin: 5px 0;
-          }
-        }
-      `}</style>
-    </footer>
-  );
-}
+export default Footer;

@@ -1,14 +1,12 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// pages/_app.js
 import '../styles/globals.css';
+import { CartProvider } from '../context/CartContext';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Navbar />
+    <CartProvider>
       <Component {...pageProps} />
-      <Footer />
-    </>
+    </CartProvider>
   );
 }
 
